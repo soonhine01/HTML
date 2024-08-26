@@ -1,0 +1,126 @@
+import math
+
+# İki nokta arasındaki mesafeyi hesaplayan fonksiyon
+def euclidean_distance(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# Kullanıcıdan iki nokta için koordinatları al
+def get_coordinates():
+    x1 = float(input("Birinci noktanın x koordinatını girin: "))
+    y1 = float(input("Birinci noktanın y koordinatını girin: "))
+    x2 = float(input("İkinci noktanın x koordinatını girin: "))
+    y2 = float(input("İkinci noktanın y koordinatını girin: "))
+    return x1, y1, x2, y2
+
+# Ana program döngüsü
+def main():
+    print("İki nokta arasındaki Öklid mesafesini hesaplayalım.")
+    x1, y1, x2, y2 = get_coordinates()
+    distance = euclidean_distance(x1, y1, x2, y2)
+    print(f"İki nokta arasındaki mesafe: {distance}")
+
+# Programı çalıştır
+if __name__ == "__main__":
+    main()
+import math
+import math
+
+# İki nokta arasındaki mesafeyi hesaplayan fonksiyon
+def euclidean_distance(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# Liste içindeki noktalar
+points = [
+    (1, 2),
+    (4, 6),
+    (7, 8)
+]
+
+# Liste içindeki her nokta çifti için mesafeyi hesapla
+def calculate_distances(points):
+    n = len(points)
+    distances = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            distance = euclidean_distance(points[i], points[j])
+            distances.append((points[i], points[j], distance))
+    return distances
+
+# Mesafeleri hesapla
+distances = calculate_distances(points)
+
+# Sonuçları yazdır
+for point1, point2, distance in distances:
+    print(f"Noktalar {point1} ve {point2} arasındaki mesafe: {distance}")
+
+# Öklid mesafesini hesaplayan fonksiyon
+def euclideanDistance(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# Örnek kullanım
+point_a = (1, 2)
+point_b = (4, 6)
+
+distance = euclideanDistance(point_a, point_b)
+print(f"Noktalar {point_a} ve {point_b} arasındaki Öklid mesafesi: {distance}")
+import math
+
+# Öklid mesafesini hesaplayan fonksiyon
+def euclideanDistance(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# Liste içindeki noktalar
+points = [
+    (1, 2),
+    (4, 6),
+    (7, 8)
+]
+
+# Mesafeleri saklayacağımız liste
+distances = []
+
+# Liste içindeki her nokta çifti için mesafeyi hesapla
+for i in range(len(points)):
+    for j in range(i + 1, len(points)):
+        distance = euclideanDistance(points[i], points[j])
+        distances.append((points[i], points[j], distance))
+
+# Sonuçları yazdır
+for point1, point2, distance in distances:
+    print(f"Noktalar {point1} ve {point2} arasındaki Öklid mesafesi: {distance}")
+import math
+
+# Öklid mesafesini hesaplayan fonksiyon
+def euclideanDistance(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# Liste içindeki noktalar
+points = [
+    (1, 2),
+    (4, 6),
+    (7, 8)
+]
+
+# Mesafeleri saklayacağımız liste
+distances = []
+
+# Liste içindeki her nokta çifti için mesafeyi hesapla
+for i in range(len(points)):
+    for j in range(i + 1, len(points)):
+        distance = euclideanDistance(points[i], points[j])
+        distances.append((points[i], points[j], distance))
+
+# Minimum mesafeyi bul
+min_distance = min(distances, key=lambda x: x[2])
+
+# Minimum mesafeyi yazdır
+print(f"Minimum mesafe: {min_distance[2]} (Noktalar: {min_distance[0]} ve {min_distance[1]})")
+
